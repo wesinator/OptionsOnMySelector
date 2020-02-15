@@ -11,16 +11,16 @@ if (selects.length) {
   for (var select of selects) {
   	if (select.id) {
       var getSelects = confirm("Do you want to download the option lists on this page to file ?");
-			if (getSelects) {
-				items = getSelectOptionItems(select);
-      	console.log(items.length, " items")
+      if (getSelects) {
+          items = getSelectOptionItems(select);
+          console.log(items.length, " items")
 
       	if (items.length) {
         	var filename = `options_${select.id}.txt`;
         	arrayToFile(items, filename);
       	}
-			}
-		}
+      }
+    }
   }
 }
 
@@ -32,7 +32,7 @@ function getSelectOptionItems(select) {
       console.log(item.text);
       items.push(item.text);
     }
-	}
+  }
 
   return items;
 }
