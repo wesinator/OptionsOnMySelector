@@ -9,11 +9,11 @@
 var selects = document.getElementsByTagName("select");
 if (selects.length) {
   for (var select of selects) {
-  	if (select.id) {
+    if (select.id) {
       var getSelects = confirm("Do you want to download the option lists on this page to file ?");
       if (getSelects) {
-          items = getSelectOptionItems(select);
-          console.log(items.length, " items")
+        items = getSelectOptionItems(select);
+        console.log(items.length, " items")
 
       	if (items.length) {
         	var filename = `options_${select.id}.txt`;
