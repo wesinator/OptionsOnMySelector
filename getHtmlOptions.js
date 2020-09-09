@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name     Get HTML <select> options list
+// @author   wesinator
 // @version  1
 // @grant    none
 // @match    *://*/*
@@ -9,8 +10,8 @@
 var selects = document.getElementsByTagName("select");
 if (selects.length) {
   for (var select of selects) {
-    if (select.id) {
-      var getSelects = confirm("Do you want to download the option lists on this page to file ?");
+    //if (select.id) {
+      var getSelects = confirm(`Do you want to download the page's option list "${select.name}" to file ?`);
       if (getSelects) {
         items = getSelectOptionItems(select);
         console.log(items.length, " items")
@@ -20,7 +21,7 @@ if (selects.length) {
         	arrayToFile(items, filename);
       	}
       }
-    }
+    //}
   }
 }
 
