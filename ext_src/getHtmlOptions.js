@@ -1,5 +1,5 @@
 var selects = document.getElementsByTagName("select");
-console.log("selects is:", selects);
+//console.log("selects:", selects);
 if (selects.length) {
   for (var select of selects) {
     //if (select.id) {
