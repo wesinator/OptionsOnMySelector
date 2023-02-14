@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "description": "Download the text contents of HTML options lists to a file.",
+  "name": "Options on My Selector",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["main.js"]
+  },
+  "browser_action": {
+    "default_icon": "assets/edit-select-all_48.png",
+    "default_title": "Options on My Selector"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+    "id": "options-on-my-selector@wesinator.github.io"
+    }
+  },
+  "icons": {
+    "16": "assets/edit-select-all_16.png",
+    "24": "assets/edit-select-all_24.png",
+    "32": "assets/edit-select-all_32.png",
+    "48": "assets/edit-select-all_48.png"
+  },
+  "version": "0.1"
+}
