@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "description": "Download the text contents of HTML options lists to a file.",
+  "description": "Export a page's HTML options lists to a file.",
   "name": "Options on My Selector",
   "permissions": [
     "activeTab"
