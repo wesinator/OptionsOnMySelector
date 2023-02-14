@@ -3,7 +3,8 @@
   "description": "Export a page's HTML options lists to a file.",
   "name": "Options on My Selector",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "*://*/*"
   ],
   "background": {
     "scripts": ["main.js"]
