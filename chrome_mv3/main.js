@@ -2,7 +2,7 @@
 chrome.action.onClicked.addListener((tab) => {
   //console.log("executing the browser action");
   chrome.scripting.executeScript({
-    target: {tabId: tab.id},
+    target: {tabId: tab.id, allFrames: true},
     files: ["getHtmlOptions.js"]
   });
 });
