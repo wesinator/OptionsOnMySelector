@@ -9,7 +9,7 @@ if (selects.length) {
         console.log(items.length, " items")
 
       	if (items.length) {
-        	var filename = `options_${select.id || select.name}.txt`;
+        	var filename = `options_${document.location.hostname}_${select.id || select.name}.txt`;
         	arrayToFile(items, filename);
       	}
       }
