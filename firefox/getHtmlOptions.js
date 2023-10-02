@@ -31,7 +31,7 @@ function getSelectOptionItems(select) {
 }
 
 function arrayToFile(list, filename) {
-  var contents = "/* retrieved from: " + document.URL + " */\n\n" + list.join('\n');
+  var contents = `/* retrieved from: ${document.URL} \n${Date()} */\n\n` + list.join('\n');
   fileDataDownload(contents, filename, "text/plain");
 }
 
