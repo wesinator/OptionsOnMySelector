@@ -15,7 +15,7 @@ if (selects.length) {
       var getSelects = confirm(`Do you want to download the page's option list "${select.name || select.id}" to a text file?`);
       if (getSelects) {
         items = getSelectOptionItems(select);
-        console.log(items.length, " items")
+        console.log(items.length, "items")
 
       	if (items.length) {
         	var filename = `options_${document.location.hostname}_${select.id || select.name}.txt`;
