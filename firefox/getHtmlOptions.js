@@ -2,18 +2,18 @@ var selects = document.getElementsByTagName("select");
 //console.log("selects:", selects);
 if (selects.length) {
   for (var select of selects) {
-    if (!select.disabled) {
+    //if (select.id) {
       var getSelects = confirm(`Would you like to download the option list "${select.name || select.id}" to a text file ?`);
       if (getSelects) {
         items = getSelectOptionItems(select);
-        console.log(items.length, "selectable items")
+        console.log(items.length, " items")
 
       	if (items.length) {
         	var filename = `options_${document.location.hostname}_${select.id || select.name}.txt`;
         	arrayToFile(items, filename);
       	}
       }
-    }
+    //}
   }
 }
 
@@ -21,7 +21,7 @@ function getSelectOptionItems(select) {
   var items = [];
 
   for (var item of select) {
-    if (item && !item.disabled) {
+    if (item) {
       console.log(item.text);
       items.push(item.text);
     }
