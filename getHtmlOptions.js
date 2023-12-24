@@ -12,6 +12,7 @@ if (selects.length) {
   for (var select of selects) {
     //if (select.id) {
       var getSelects = confirm(`Do you want to download the page's option list "${select.name}" to a text file?`);
+      var getSelects = confirm(`Do you want to download the page's option list "${select.name || select.id}" to a text file?`);
       if (getSelects) {
         items = getSelectOptionItems(select);
         console.log(items.length, " items")
