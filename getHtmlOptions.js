@@ -11,13 +11,13 @@ var selects = document.getElementsByTagName("select");
 if (selects.length) {
   for (var select of selects) {
     //if (select.id) {
-      var getSelects = confirm(`Do you want to download the page's option list "${select.name}" to file ?`);
+      var getSelects = confirm(`Do you want to download the page's option list "${select.name}" to a text file?`);
       if (getSelects) {
         items = getSelectOptionItems(select);
         console.log(items.length, " items")
 
       	if (items.length) {
-        	var filename = `options_${select.id}.txt`;
+        	var filename = `options_${document.location.hostname}_${select.id || select.name}.txt`;
         	arrayToFile(items, filename);
       	}
       }
@@ -39,7 +39,8 @@ function getSelectOptionItems(select) {
 }
 
 function arrayToFile(list, filename) {
-  fileDataDownload(list.join('\n'), filename, "text/plain");
+  var contents = `/* retrieved from: ${document.URL} \n${Date()} */\n\n` + list.join('\n');
+  fileDataDownload(contents, filename, "text/plain");
 }
 
 function fileDataDownload(contents, name, mimeType) {
